@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+<script>
+
+    //PUSH - add new elements to an array
+
+    var sports = ['soccer', 'baseball'];
+    var total = sports.push('football', 'swimming');
+
+    console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
+    console.log(total);  // 4
+
+    // POP - remove the last element of an array
+
+    var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
+    console.log(myFish); // ['angel', 'clown', 'mandarin', 'sturgeon']
+
+    var popped = myFish.pop();
+    console.log(popped); // 'sturgeon'
+    console.log(myFish); // ['angel', 'clown', 'mandarin' ]
+
+    // SHIFT - remove the first element of an array
+
+    var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+
+    console.log('myFish before: ' + myFish);
+    // "myFish before: angel,clown,mandarin,surgeon"
+
+    var shifted = myFish.shift(); 
+
+    console.log('myFish after: ' + myFish); 
+    // "myFish after: clown,mandarin,surgeon" 
+
+    console.log('Removed this element: ' + shifted); 
+    // "Removed this element: angel"
+
+    //REVERSE  - reverse the array 
+    var myArray = ['one', 'two', 'three'];
+    myArray.reverse(); 
+
+    console.log(myArray) // ['three', 'two', 'one']
+
+
+
+</script>
+
+</body>
+</html>
