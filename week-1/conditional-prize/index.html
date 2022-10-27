@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Try and win a car!</title>
+
+<!-- CSS here -->
+
+ <style>
+
+ /* Basic CSS comment */
+ body {
+ background: grey;
+ color: white;
+ width: 960px;
+ margin: 0 auto;
+ font-size: 30px;
+ }
+
+ h1 {
+ font-size: 80px;
+ color: #333 ;
+ }
+
+ .car {
+    width: 230px;
+    height: 250px;
+ }
+
+ .hello {
+    width: 250px;
+    height: 300px;
+
+ }
+
+ </style>
+
+
+<!-- JavaScript here -->
+
+ <script>
+    // this is an event
+    // alert("You're cute!");
+
+    var username = prompt("Hello, what's your name?");
+    var car = new Array("BMW", "Benz", "Porsche");
+ 
+    if(username==="Arbi" || username === "Chris") {
+        document.write("<h1>Hello " + username + ", you won a " + car[0]  + "!</h1>");
+    } else {
+        document.write("<h1>Hello " + username + ", you won nothing!</h1>" )
+    }
+   
+
+    
+ </script>
+
+ </head>
+
+ <body>
+    <img class="hello" src="Hello.png" alt="Hello">
+    <img class="car" src="bmw.jpeg" alt="BMW">
+    <img class="car" src="Mercedes-G-Class.jpeg" alt="Mercedes">
+    <img class="car" src="porsche.jpeg" alt="Porsche">
+ </body>
+
+</html>

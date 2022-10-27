@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Restaurant randomiser">
+		<meta name="keywords" content="Restaurant randomiser">
+
+		<title>What should we eat today?</title>
+		
+        <style>
+            body{
+                background-color: darkkhaki;
+            }
+        </style>
+
+		<script>
+            
+
+			// Our List of Bars
+			var restaurants = [
+				'Chinese',
+				'American',
+				'Greek',
+                'Thai',
+                'Italian',
+                'Korean',
+                'Japanese',
+                'Mexican'
+			];
+
+            var spend = [10, 15, 20 ,25, 30, 35, 40, 45, 50]
+
+			var randomNumber = Math.floor(Math.random()*restaurants.length);
+            var budget = Math.floor(Math.random()*spend.length)
+			
+			var food = restaurants[randomNumber];
+            var money = spend[budget];
+            document.write("<h1>What should we eat today?</h1>")
+			document.write("<h1>Let's do <strong>" + food + "</strong> food with a budget up to <strong>" + money + " pounds</strong>!</h1>");
+			
+		
+		</script>
+	</head>
+	<body>
+		<!-- PAGE CONTENT WILL BE PRINTED HERE --> 
+        <img src="japanese.jpeg" alt="japanese">
+        <img src="chinese.webp" alt="chinese">
+	</body>
+</html>
