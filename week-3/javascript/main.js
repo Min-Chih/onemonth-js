@@ -54,7 +54,16 @@ function getInput(userinput) {
 	.catch(err => console.error(err));
 };
 
+function renderTracks () {
 
+	let card = document.createElement('div');
+	card.classList.add('card');
+	let searchResults = document.querySelector('.js-search-results');
+	searchResults.appendChild(card);
+
+}
+
+renderTracks();
 
 
 // Step3: Display the cards
