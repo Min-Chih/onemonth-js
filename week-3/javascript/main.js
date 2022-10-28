@@ -48,7 +48,7 @@ const options = {
 function getInput(userinput) {
     var search = userinput.split(' ').join('%20');
 	let url = `https://shazam.p.rapidapi.com/search?term=${search}&locale=en-US&offset=0&limit=5`
-	fetch('https://shazam.p.rapidapi.com/search?term=kiss%20the%20rain&locale=en-US&offset=0&limit=5', options)
+	fetch(url, options)
 	.then(response => response.json())
 	.then(response => console.log(response))
 	.catch(err => console.error(err));
