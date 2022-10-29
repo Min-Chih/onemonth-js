@@ -41,7 +41,7 @@ async function getInput(userinput) {
 	let data = await response.json();
 	console.log(data);
 
-	for(let i=0; i < 6; i++) {
+	for(let i=0; i < data.tracks.hits.length; i++) {
 
 		// card
 		let card = document.createElement('div');
