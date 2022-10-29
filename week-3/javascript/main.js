@@ -50,14 +50,57 @@ function getInput(userinput) {
 	let url = `https://shazam.p.rapidapi.com/search?term=${search}&locale=en-US&offset=0&limit=5`
 	fetch(url, options)
 	.then(response => response.json())
-	.then(response => console.log(response))
+	.then(response => console.log(response.artists))
+	
 	.catch(err => console.error(err));
 };
 
-function renderTracks () {
+function renderTracks (tracks) {
 
+
+	// card
 	let card = document.createElement('div');
 	card.classList.add('card');
+
+	// image
+	let imageDiv = document.createElement('div');
+	imageDiv.classList.add('image-container');
+
+	let image_img = document.createElement('img');
+	image_img.classList.add('image');
+	//let imageSrc = response.artists.hits[i].artist.avatar
+	image_img.src = 'http://www.placekitten.com/290/290';
+
+	imageDiv.appendChild(image_img);
+
+	//content 
+	let content = document.createElement('div');
+	content.classList.add('content');
+
+	let header = document.createElement('div');
+	header.classList.add('header');
+	header.innerHTML = `<a href="#" target="_blank">Hello</a>`;
+
+	// button 
+	let addButton = document.createElement('div');
+	addButton.classList.add('ui', 'bottom', 'attached', 'button', 'js-button');
+
+	let icon = document.createElement('div');
+	icon.classList.add('add', 'icon');
+
+	let buttonText = document.createElement('span');
+	buttonText.innerHTML = 'Add to playlist';
+
+	//appendChild
+	content.appendChild(header);
+
+	addButton.appendChild(icon);
+	addButton.appendChild(buttonText);
+
+	card.appendChild(imageDiv);
+	card.appendChild(content);
+	card.appendChild(addButton);
+
 	let searchResults = document.querySelector('.js-search-results');
 	searchResults.appendChild(card);
 
