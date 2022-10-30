@@ -82,6 +82,10 @@ async function getInput(userinput) {
 	
 		addButton.appendChild(icon);
 		addButton.appendChild(buttonText);
+
+		addButton.addEventListener('click', function() {
+			addToPlaylist(data);
+		})
 	
 		card.appendChild(imageDiv);
 		card.appendChild(content);
@@ -91,13 +95,32 @@ async function getInput(userinput) {
 		searchResults.appendChild(card);
 
 
+		function addToPlaylist(data) {
+			var sideBar = document.querySelector('.js-playlist');
+		
+			var list = document.createElement('a');
+			list.href = data.tracks.hits[i].track.url;
+			list.innerText = data.tracks.hits[i].track.title;
+		
+			sideBar.appendChild(list);
+		
+		}
+
 	}
 		
 
 };
 
 
+// Step4: Add to playlist and direct to the song detail page
 
+function addToPlaylist(data) {
+	var sideBar = document.querySelector('.js-playlist');
 
+	var list = document.createElement('a');
+	list.innerHTML = data.tracks.hits[i].track.url;
+	list.innerText = data.tracks.hits[i].track.title
 
-// Step4: Add to playlist and play
+	sideBar.appendChild(list);
+
+}
