@@ -21,7 +21,7 @@ document.querySelector('input').addEventListener('keypress', function(e) {
     }
 })
 
-// Step2: Query Shazam API
+// Step2: Fetch Shazam API
 
 
 const options = {
@@ -32,6 +32,7 @@ const options = {
 	}
 };
 
+// Step3: Display the cards
 
 async function getInput(userinput) {
 
@@ -64,7 +65,7 @@ async function getInput(userinput) {
 	
 		let header = document.createElement('div');
 		header.classList.add('header');
-		header.innerHTML = `<a href="#" target="_blank">${data.tracks.hits[i].track.title}</a>`;
+		header.innerHTML = `<a href=${data.tracks.hits[i].track.url} target="_blank">${data.tracks.hits[i].track.title}</a>`;
 	
 		// button 
 		let addButton = document.createElement('div');
@@ -95,7 +96,7 @@ async function getInput(userinput) {
 
 };
 
-// Step3: Display the cards
+
 
 
 
