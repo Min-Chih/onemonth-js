@@ -4,20 +4,15 @@ let input = document.querySelector('.js-search');
 let button = document.querySelector('i');
 
 
-button.addEventListener('click', function(e){
-    let userInput = document.querySelector('input').value;
-    getInput(userInput);
-	console.log(userInput);
-});
+button.addEventListener('click', getResults);
 
 // When press Enter, event listener works
 
 document.querySelector('input').addEventListener('keypress', function(e) {
   
-    var input = document.querySelector("input").value;
     // if the key ENTER is pressed
     if(e.key === 'Enter') {
-        getInput(input);
+       getResults();
     }
 })
 
@@ -94,13 +89,15 @@ async function getInput(userinput) {
 		let searchResults = document.querySelector('.js-search-results');
 		searchResults.appendChild(card);
 
+		//clear(searchResults);
 
 		function addToPlaylist(data) {
 			var sideBar = document.querySelector('.js-playlist');
 		
 			var list = document.createElement('a');
+			list.classList.add('list');
 			list.href = data.tracks.hits[i].track.url;
-			list.innerText = data.tracks.hits[i].track.title;
+			list.innerText = `• ${data.tracks.hits[i].track.title}`;
 		
 			sideBar.appendChild(list);
 		
@@ -123,4 +120,15 @@ function addToPlaylist(data) {
 
 	sideBar.appendChild(list);
 
+}
+
+// Clear search results after every search
+
+function getResults (event) {  
+
+    let newWord = input.value
+	let searchResults = document.querySelector('.js-search-results')
+    searchResults.innerHTML = "";
+    
+    getInput(newWord);
 }
