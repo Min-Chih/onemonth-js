@@ -70,3 +70,7 @@ html, body {
 	color: white;
 	font-size: 40px;
 }
+
+.list-item {
+	margin-left: 25px;
+}

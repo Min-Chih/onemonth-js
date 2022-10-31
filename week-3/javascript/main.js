@@ -94,10 +94,10 @@ async function getInput(userinput) {
 		function addToPlaylist(data) {
 			var sideBar = document.querySelector('.js-playlist');
 		
-			var list = document.createElement('a');
-			list.classList.add('list');
-			list.href = data.tracks.hits[i].track.url;
-			list.innerText = `• ${data.tracks.hits[i].track.title}`;
+			var list = document.createElement('p');
+			list.classList.add('list-item');
+			list.innerHTML = `<a href=${data.tracks.hits[i].track.url}>• ${data.tracks.hits[i].track.title}</a>;`
+			
 		
 			sideBar.appendChild(list);
 		
@@ -111,16 +111,17 @@ async function getInput(userinput) {
 
 // Step4: Add to playlist and direct to the song detail page
 
-function addToPlaylist(data) {
-	var sideBar = document.querySelector('.js-playlist');
+// function addToPlaylist(data) {
+// 	var sideBar = document.querySelector('.js-playlist');
 
-	var list = document.createElement('a');
-	list.innerHTML = data.tracks.hits[i].track.url;
-	list.innerText = data.tracks.hits[i].track.title
+// 	var list = document.createElement('p');
+// 	list.innerHTML = `<a href=${data.tracks.hits[i].track.url}>${data.tracks.hits[i].track.title}</a>;`
+// 	//list.innerText = data.tracks.hits[i].track.title;
+// 	let spaceLine = document.createElement("hr");
 
-	sideBar.appendChild(list);
+// 	sideBar.appendChild(list, spaceLine);
 
-}
+// }
 
 // Clear search results after every search
 
