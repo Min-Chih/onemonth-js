@@ -141,7 +141,7 @@ function getResults (event) {
 
 // Add a Clear button to delete the whole list
 
-let deleteButton = document.querySelector('.delete');
+let deleteButton = document.querySelector('.delete-button');
 
 function clearList() {
 	var sideBar = document.querySelector('.js-playlist');
