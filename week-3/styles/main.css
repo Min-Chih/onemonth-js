@@ -13,18 +13,18 @@ html, body {
 	left: 0;
 }
 
-#soundcloud-player .col-left {
+#soundcloud-player .title-button {
 	width: 20%;
 	height: 100%;
 	background-color: #292929;
 	overflow: auto;
 
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 
 	min-width: 200px;
-	z-index: 1;
+	z-index: -1;
 }
 
 #soundcloud-player .col-right {
@@ -66,11 +66,22 @@ html, body {
 }
 
 .my-list-title {
-	margin-left: 25px;
+	margin-left: 15px;
 	color: white;
-	font-size: 40px;
+	font-size: 25px;
 }
 
 .list-item {
 	margin-left: 25px;
+}
+
+.delete {
+	margin-bottom: 10px;
+	margin-left: 15px;
+	height: 30px;
+	width: 80px;
+}
+
+.title-button {
+
 }

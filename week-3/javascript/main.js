@@ -128,7 +128,7 @@ sideBar.innerHTML = localStorage.getItem("key");
 
 // }
 
-// Resetß search results after every search
+// Reset search results after every search
 
 function getResults (event) {  
 
@@ -137,4 +137,15 @@ function getResults (event) {
     searchResults.innerHTML = "";
     
     getInput(newWord);
-}
+};
+
+// Add a Clear button to delete the whole list
+
+let deleteButton = document.querySelector('.delete');
+
+function clearList() {
+	var sideBar = document.querySelector('.js-playlist');
+	sideBar.innerHTML = localStorage.clear('key');
+};
+
+deleteButton.addEventListener('click', clearList);
