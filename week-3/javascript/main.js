@@ -146,6 +146,7 @@ let deleteButton = document.querySelector('.delete');
 function clearList() {
 	var sideBar = document.querySelector('.js-playlist');
 	sideBar.innerHTML = localStorage.clear('key');
+	console.log("it works")
 };
 
 deleteButton.addEventListener('click', clearList);
