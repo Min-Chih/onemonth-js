@@ -96,10 +96,13 @@ async function getInput(userinput) {
 		
 			var list = document.createElement('p');
 			list.classList.add('list-item');
-			list.innerHTML = `<a href=${data.tracks.hits[i].track.url}>• ${data.tracks.hits[i].track.title}</a>;`
+			list.innerHTML = `<a href=${data.tracks.hits[i].track.url}>• ${data.tracks.hits[i].track.title}</a>`;
 			
 		
 			sideBar.appendChild(list);
+
+			// Store the list on the sidebar
+			localStorage.setItem('key', sideBar.innerHTML);
 		
 		}
 
@@ -108,6 +111,8 @@ async function getInput(userinput) {
 
 };
 
+var sideBar = document.querySelector('.js-playlist');
+sideBar.innerHTML = localStorage.getItem("key");
 
 // Step4: Add to playlist and direct to the song detail page
 
@@ -123,7 +128,7 @@ async function getInput(userinput) {
 
 // }
 
-// Clear search results after every search
+// Resetß search results after every search
 
 function getResults (event) {  
 
