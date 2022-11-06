@@ -16,3 +16,13 @@ Basic JavaScript Practice
 - addEventListener: click, keypress, keyup
 - create function
 - Used Giphy API for the week-2 project
+
+# Week 3
+
+- Completed a Shazam Player App
+- included a search bar for users to search for songs, and added them to the Playlist on the side bar, and used locaStorage to keep the list on when refreshing the page
+- Main takeaways: 
+-- get input value from search bar
+-- destructure the API data and get the acurate response from the data
+-- create a playlist that user can add songs they like in there and store in the local machine
+-- create a clear button and delete the localStorage list
