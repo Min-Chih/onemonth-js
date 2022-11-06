@@ -26,3 +26,8 @@ Basic JavaScript Practice
 2. destructure the API data and get the acurate response from the data
 3. create a playlist that user can add songs they like in there and store in the local machine
 4. create a clear button and delete the localStorage list
+
+# Week 4
+
+- arrays function: PUSH, POP, SHIFT, REVERSE
+- difference between forEach and map
