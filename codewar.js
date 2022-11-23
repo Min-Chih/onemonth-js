@@ -1,4 +1,6 @@
 //Human readable duration format
+// When givien a number of seconds, convert it into years, days, hours, minutes, and seconds
+// ex. 14610 -> 4 hours, 3 minutes and 30 seconds
 
 function formatDuration (seconds) {
   if ( seconds === 0 ) return 'now' ;
