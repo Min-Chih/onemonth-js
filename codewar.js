@@ -45,3 +45,27 @@ function formatDuration (seconds) {
   }
   return resultStr ;
 }
+module.exports = formatDuration;
+
+// Reverse the array
+// Given an Array A and reverse time K, moving the final object in the array to the front K times
+
+function reverseArray (A,K) {
+  for (let i=0; i < K; i++){
+
+  // step 1: POP the array
+  let arrayEnd = A.pop();
+
+  // step 2: reverse the array
+  A.reverse();
+
+  // step 3: PUSH the arrayEnd to the array
+  A.push(arrayEnd);
+
+  // step 4: reverse the array again
+  A.reverse();
+ }
+ return A;
+}
+
+module.exports = reverseArray;
